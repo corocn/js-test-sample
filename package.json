@@ -1,0 +1,10 @@
+{
+  "name": "js-test-sample",
+  "version": "1.0.0",
+  "main": "fizzbuzz.js",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2"
+  }
+}

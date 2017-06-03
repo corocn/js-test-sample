@@ -1,23 +1,24 @@
 var chai = require('chai');
-var fizzbuzz = require('../fizzbuzz.js');
-chai.should();
+var expect = chai.expect;
+var fizzbuzz = require('./f.js');
+
 
 describe('FizzBuzz /w BDD', function () {
-  var subject;
 
   it('3の倍数の時にFizzが返る', function () {
-    subject = fizzbuzz(3);
-    subject.should.equal('Fizz');
+    expect(fizzbuzz(3)).to.equal('Fizz');
   });
 
   it('5の倍数の時にBuzzが返る', function () {
-    subject = fizzbuzz(5);
-    subject.should.equal('Buzz');
+    expect(fizzbuzz(5)).equal('Buzz');
   });
 
   it('3の倍数かつ5の倍数の時にFizzBuzzが返る', function () {
-    subject = fizzbuzz(15);
-    subject.should.equal('FizzBuzz');
+    expect(fizzbuzz(15)).to.equal('FizzBuzz');
+  });
+
+  it('値がそのまま返る', function() {
+    expect(fizzbuzz(2)).to.equal(2);
   });
 
 });
